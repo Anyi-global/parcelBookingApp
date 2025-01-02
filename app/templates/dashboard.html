@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% include 'includes/_message.html' %}
+
+<h2 style="color: rgb(105, 105, 163);">Dashboard</h2>
+
+<a href="{{ url_for('main.book_parcel') }}" class="button">Book New Parcel</a>
+<h3>Your Parcels</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Tracking Number</th>
+            <th>Recipient Name</th>
+            <th>Recipient Address</th>
+            <th>Parcel Weight</th>
+            <th>Parcel Size</th>
+            <th>Parcel Cost ($)</th>
+            <th>Date and Time</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for parcel in parcels %}
+            <tr>
+                <td>{{ parcel.tracking_number }}</td>
+                <td>{{ parcel.recipient_name }}</td>
+                <td>{{ parcel.recipient_address }}</td>
+                <td>{{ parcel.parcel_weight }}</td>
+                <td>{{ parcel.parcel_size }}</td>
+                <td>{{ parcel.cost }}</td>
+                <td>{{ parcel.date_and_time }}</td>
+                <td>{{ parcel.status }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

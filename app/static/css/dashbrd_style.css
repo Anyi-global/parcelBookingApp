@@ -1,0 +1,75 @@
+/* General dashboard styling */
+h2{
+    color: #344133;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+h3 {
+    color: #344133;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Button styling */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    color: #fff;
+    background-color: #2980b9;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #3498db;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    a.button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

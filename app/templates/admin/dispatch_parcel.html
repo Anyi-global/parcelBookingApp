@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 style="color: rgb(105, 105, 163);">Dashboard</h2>
+
+{% include 'includes/_message.html' %}
+
+<h3>Your Parcels</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Tracking Number</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for parcel in parcels %}
+        <tr>
+            <td>{{ parcel.tracking_number }}</td>
+            <td>{{ parcel.status }}</td>
+            <td>
+            <!-- If parcel is not already dispatched, show a dispatch button -->
+            {% if parcel.status != 'Dispatched' %}
+                <form action="{{ url_for('admin.dispatch_parcel', tracking_number=parcel.tracking_number) }}" method="POST">
+                <button type="submit">Dispatch Parcel</button>
+                </form>
+            {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

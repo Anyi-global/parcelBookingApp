@@ -1,0 +1,81 @@
+/* Payment page styling */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#payment-form {
+    max-width: 700px; /* Increased maximum width for the form */
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+    
+#card-element {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%; /* Ensures the card input takes up the full width of the container */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+#card-errors {
+    color: #fa755a;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #payment-form {
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,91 @@
+/* General page styling */
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"] {
+    width: calc(100% - 22px); /* Adjust width for padding and border */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+form button {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #3498db;
+}
+
+/* Parcel details styling */
+h3 {
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* No parcel found message */
+p.no-parcel {
+    color: #e74c3c;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    form input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+}

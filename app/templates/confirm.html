@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="confirmation-container">
+    <div class="confirmation-icon">
+        <!-- You can use an icon library or image here -->
+        <i class="fa fa-check-circle"></i>
+    </div>
+    <h2>Confirmation</h2>
+    <p class="confirmation-message">Your payment has been processed successfully and parcel booked.</p>
+    <div class="button-container">
+        <a href="{{ url_for('main.dashboard') }}">
+            <button>Go To Dashboard</button>
+        </a>
+    </div>
+</div>
+{% endblock %}

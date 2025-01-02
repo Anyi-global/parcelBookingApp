@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 style="color: rgb(105, 105, 163)">Login</h2>
+
+{% include 'includes/_message.html' %}
+
+<form method="POST" action="{{ url_for('main.login') }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.email.label }}
+        {{ form.email(size=32, placeholder="Enter email") }}<br>
+        {% for error in form.email.errors %}
+            <span>{{ error }}</span><br>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.password.label }}
+        {{ form.password(size=32, placeholder="Enter password") }}<br>
+        {% for error in form.password.errors %}
+            <span>{{ error }}</span><br>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.remember() }} {{ form.remember.label }}<br>
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}

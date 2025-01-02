@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 style="color: khaki;">Book Parcel</h2>
+<form method="POST" action="{{ url_for('main.book_parcel') }}" class="parcel-form">
+    {{ form.hidden_tag() }}
+    
+    <!-- Sender Information -->
+    <div class="form-section">
+        <h3>Sender Information</h3>
+        <div class="form-group">
+            <div class="form-column">
+                {{ form.sender_name.label }}
+                {{ form.sender_name(size=32, placeholder="Enter sender's name") }}
+                {% for error in form.sender_name.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div class="form-column">
+                {{ form.sender_phone.label }}
+                {{ form.sender_phone(size=32, placeholder="Enter sender's phone number") }}
+                {% for error in form.sender_phone.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.sender_address.label }}
+            {{ form.sender_address(cols=30, rows=3, placeholder="Enter sender's address") }}
+            {% for error in form.sender_address.errors %}
+                <span>{{ error }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    <hr>
+    <!-- Recipient Information -->
+    <div class="form-section">
+        <h3>Recipient Information</h3>
+        <div class="form-group">
+            <div class="form-column">
+                {{ form.recipient_name.label }}
+                {{ form.recipient_name(size=32, placeholder="Enter recipient's name") }}
+                {% for error in form.recipient_name.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div class="form-column">
+                {{ form.recipient_phone.label }}
+                {{ form.recipient_phone(size=32, placeholder="Enter recipient's phone number") }}
+                {% for error in form.recipient_phone.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.recipient_address.label }}
+            {{ form.recipient_address(cols=30, rows=3, placeholder="Enter recipient's address") }}
+            {% for error in form.recipient_address.errors %}
+                <span>{{ error }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    <hr>
+    <!-- Parcel Information -->
+    <div class="form-section">
+        <h3>Parcel Information</h3>
+        <div class="form-group">
+            <div class="form-column">
+                {{ form.parcel_weight.label }}
+                {{ form.parcel_weight(size=32, placeholder="Enter parcel weight (kg)") }}
+                {% for error in form.parcel_weight.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div class="form-column">
+                {{ form.parcel_size.label }}
+                {{ form.parcel_size(size=32, placeholder="Enter parcel size (cm)") }}
+                {% for error in form.parcel_size.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form.delivery_instructions.label }}
+            {{ form.delivery_instructions(cols=30, rows=3, placeholder="Enter any delivery instructions") }}
+            {% for error in form.delivery_instructions.errors %}
+                <span>{{ error }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="form-group">
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}
