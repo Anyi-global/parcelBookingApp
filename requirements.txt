@@ -14,11 +14,13 @@ Flask-Mail==0.10.0
 flask-mongoengine @ git+https://github.com/idoshr/flask-mongoengine.git@e244408acf440c4208f7ddcd6e5d819cb472e4da
 Flask-PyMongo==3.0.1
 Flask-WTF==1.2.2
+gunicorn==23.0.0
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.6
 MarkupSafe==3.0.2
 mongoengine==0.29.1
+packaging==25.0
 pymongo==4.13.0
 python-dotenv==1.1.0
 requests==2.32.3
