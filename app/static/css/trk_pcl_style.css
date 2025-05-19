@@ -1,8 +1,12 @@
 /* General page styling */
 h2 {
-    color: #2c3e50;
+    color: white;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.header3 {
+    color: rgb(209, 209, 14)
 }
 
 form {

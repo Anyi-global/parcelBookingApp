@@ -227,7 +227,7 @@ def payment():
         amount = session['parcel_info']['cost']  # amount in session
         
         try:
-            # Simulate payment processing logic (replace with Stripe or other payment logic)
+            # Simulate payment processing logic (replace with Stripe payment logic)
             customer = stripe.Customer.create(
                 email=current_user.get_email(),  # Current user's email
                 source=request.form['stripeToken']  # Card token from Stripe form

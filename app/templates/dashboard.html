@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+
 {% block content %}
 
 {% include 'includes/_message.html' %}
 
-<h2 style="color: rgb(105, 105, 163);">Dashboard</h2>
+<h2 style="color: rgb(255, 255, 255);">Dashboard</h2>
 
 <a href="{{ url_for('main.book_parcel') }}" class="button">Book New Parcel</a>
-<h3>Your Parcels</h3>
+<h3 class="header3">Your Parcels</h3>
 <table>
     <thead>
         <tr>

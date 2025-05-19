@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h2 style="color: rgb(105, 105, 163);">Track Parcel</h2>
+<h2 style="color: rgb(160, 211, 21);">Track Parcel</h2>
 <form method="GET" action="{{ url_for('main.track_parcel') }}">
     <label for="tracking_number">Tracking Number</label>
     <input type="text" name="tracking_number" id="tracking_number" placeholder="Enter your tracking number" required>
@@ -8,12 +8,12 @@
 </form>
 
 {% if parcel %}
-    <h3>Parcel Details</h3>
-    <p><strong>Tracking Number:</strong> {{ parcel.tracking_number }}</p>
-    <p><strong>Recipient Name:</strong> {{ parcel.recipient_name }}</p>
-    <p><strong>Recipient Address:</strong> {{ parcel.recipient_address }}</p>
-    <p><strong>Recipient Phone:</strong> {{ parcel.recipient_phone }}</p>
-    <p><strong>Status:</strong> {{ parcel.status }}</p>
+    <h3 class="header3">Parcel Details:</h3>
+    <p style="color: white;"><strong>Tracking Number:</strong> {{ parcel.tracking_number }}</p>
+    <p style="color: white;"><strong>Recipient Name:</strong> {{ parcel.recipient_name }}</p>
+    <p style="color: white;"><strong>Recipient Address:</strong> {{ parcel.recipient_address }}</p>
+    <p style="color: white;"><strong>Recipient Phone:</strong> {{ parcel.recipient_phone }}</p>
+    <p style="color: white;"><strong>Status:</strong> {{ parcel.status }}</p>
 {% elif parcel is not none %}
     <p class="no-parcel">No parcel found with this tracking number.</p>
 {% endif %}
